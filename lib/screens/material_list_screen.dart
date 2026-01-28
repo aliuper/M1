@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import '../providers/material_provider.dart';
 import '../models/material_item.dart';
@@ -51,9 +50,9 @@ class _MaterialListScreenState extends State<MaterialListScreen> {
         ),
         title: Text(
           'Malzeme Listesi',
-          style: GoogleFonts.poppins(
+          style: const TextStyle(
             fontWeight: FontWeight.w600,
-            color: const Color(0xFF1F2937),
+            color: Color(0xFF1F2937),
           ),
         ),
         actions: [
@@ -112,7 +111,7 @@ class _MaterialListScreenState extends State<MaterialListScreen> {
                 },
                 decoration: InputDecoration(
                   hintText: 'Malzeme ara...',
-                  hintStyle: GoogleFonts.poppins(color: const Color(0xFF9CA3AF)),
+                  hintStyle: const TextStyle(color: Color(0xFF9CA3AF)),
                   prefixIcon: const Icon(Icons.search_rounded, color: Color(0xFF9CA3AF)),
                   suffixIcon: _searchQuery.isNotEmpty
                       ? IconButton(
@@ -166,10 +165,10 @@ class _MaterialListScreenState extends State<MaterialListScreen> {
                           _searchQuery.isEmpty
                               ? 'Henüz malzeme eklenmemiş'
                               : 'Malzeme bulunamadı',
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
-                            color: const Color(0xFF1F2937),
+                            color: Color(0xFF1F2937),
                           ),
                         ),
                         const SizedBox(height: 8),
@@ -178,9 +177,9 @@ class _MaterialListScreenState extends State<MaterialListScreen> {
                               ? 'Sağ üstteki + butonuna tıklayarak\nmalzeme ekleyebilirsiniz'
                               : 'Farklı arama terimleri deneyin',
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 14,
-                            color: const Color(0xFF6B7280),
+                            color: Color(0xFF6B7280),
                           ),
                         ),
                       ],
@@ -303,10 +302,10 @@ class _MaterialListScreenState extends State<MaterialListScreen> {
                       children: [
                         Text(
                           material.name,
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
-                            color: const Color(0xFF1F2937),
+                            color: Color(0xFF1F2937),
                           ),
                         ),
                         if (material.description != null &&
@@ -317,9 +316,9 @@ class _MaterialListScreenState extends State<MaterialListScreen> {
                               material.description!,
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
-                              style: GoogleFonts.poppins(
+                              style: const TextStyle(
                                 fontSize: 13,
-                                color: const Color(0xFF6B7280),
+                                color: Color(0xFF6B7280),
                               ),
                             ),
                           ),
@@ -352,21 +351,21 @@ class _MaterialListScreenState extends State<MaterialListScreen> {
         ),
         title: Text(
           'Malzemeyi Sil',
-          style: GoogleFonts.poppins(
+          style: const TextStyle(
             fontWeight: FontWeight.w600,
           ),
         ),
         content: Text(
           '"${material.name}" malzemesini silmek istediğinize emin misiniz?',
-          style: GoogleFonts.poppins(),
+          style: const TextStyle(),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
             child: Text(
               'İptal',
-              style: GoogleFonts.poppins(
-                color: const Color(0xFF6B7280),
+              style: const TextStyle(
+                color: Color(0xFF6B7280),
               ),
             ),
           ),
@@ -378,7 +377,7 @@ class _MaterialListScreenState extends State<MaterialListScreen> {
                 SnackBar(
                   content: Text(
                     'Malzeme silindi',
-                    style: GoogleFonts.poppins(),
+                    style: const TextStyle(),
                   ),
                   backgroundColor: const Color(0xFFEF4444),
                   behavior: SnackBarBehavior.floating,
@@ -396,7 +395,7 @@ class _MaterialListScreenState extends State<MaterialListScreen> {
             ),
             child: Text(
               'Sil',
-              style: GoogleFonts.poppins(
+              style: const TextStyle(
                 color: Colors.white,
               ),
             ),

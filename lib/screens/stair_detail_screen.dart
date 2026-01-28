@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../models/stair_model.dart';
 import '../providers/material_provider.dart';
 import 'add_stair_screen.dart';
@@ -119,14 +118,14 @@ class StairDetailScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     'Merdiven Adı',
-                                    style: GoogleFonts.poppins(
+                                    style: const TextStyle(
                                       fontSize: 12,
                                       color: const Color(0xFF6B7280),
                                     ),
                                   ),
                                   Text(
                                     stair.name,
-                                    style: GoogleFonts.poppins(
+                                    style: const TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.w600,
                                       color: const Color(0xFF1F2937),
@@ -161,14 +160,14 @@ class StairDetailScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     'Barkod',
-                                    style: GoogleFonts.poppins(
+                                    style: const TextStyle(
                                       fontSize: 12,
                                       color: const Color(0xFF6B7280),
                                     ),
                                   ),
                                   Text(
                                     stair.barcode,
-                                    style: GoogleFonts.poppins(
+                                    style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w600,
                                       color: const Color(0xFF6366F1),
@@ -206,7 +205,7 @@ class StairDetailScreen extends StatelessWidget {
                                   children: [
                                     Text(
                                       'Açıklama',
-                                      style: GoogleFonts.poppins(
+                                      style: const TextStyle(
                                         fontSize: 12,
                                         color: const Color(0xFF6B7280),
                                       ),
@@ -214,7 +213,7 @@ class StairDetailScreen extends StatelessWidget {
                                     const SizedBox(height: 4),
                                     Text(
                                       stair.description!,
-                                      style: GoogleFonts.poppins(
+                                      style: const TextStyle(
                                         fontSize: 15,
                                         color: const Color(0xFF1F2937),
                                         height: 1.5,
@@ -234,7 +233,7 @@ class StairDetailScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Gerekli Malzemeler',
-                        style: GoogleFonts.poppins(
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
                           color: const Color(0xFF1F2937),
@@ -249,7 +248,7 @@ class StairDetailScreen extends StatelessWidget {
                         ),
                         child: Text(
                           '${stair.materials.length}',
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 13,
                             fontWeight: FontWeight.w600,
                             color: Colors.white,
@@ -279,7 +278,7 @@ class StairDetailScreen extends StatelessWidget {
                               const SizedBox(height: 12),
                               Text(
                                 'Malzeme listesi boş',
-                                style: GoogleFonts.poppins(
+                                style: const TextStyle(
                                   color: const Color(0xFF6B7280),
                                 ),
                               ),
@@ -324,7 +323,7 @@ class StairDetailScreen extends StatelessWidget {
                                 ),
                                 title: Text(
                                   'Bilinmeyen Malzeme',
-                                  style: GoogleFonts.poppins(
+                                  style: const TextStyle(
                                     color: Colors.grey,
                                   ),
                                 ),
@@ -370,7 +369,7 @@ class StairDetailScreen extends StatelessWidget {
                                       children: [
                                         Text(
                                           material.name,
-                                          style: GoogleFonts.poppins(
+                                          style: const TextStyle(
                                             fontSize: 15,
                                             fontWeight: FontWeight.w600,
                                             color: const Color(0xFF1F2937),
@@ -382,7 +381,7 @@ class StairDetailScreen extends StatelessWidget {
                                             material.description!,
                                             maxLines: 1,
                                             overflow: TextOverflow.ellipsis,
-                                            style: GoogleFonts.poppins(
+                                            style: const TextStyle(
                                               fontSize: 12,
                                               color: const Color(0xFF6B7280),
                                             ),
@@ -401,7 +400,7 @@ class StairDetailScreen extends StatelessWidget {
                                     ),
                                     child: Text(
                                       'x${sm.quantity}',
-                                      style: GoogleFonts.poppins(
+                                      style: const TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.w700,
                                         color: const Color(0xFF10B981),

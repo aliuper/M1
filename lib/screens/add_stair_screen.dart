@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as path;
@@ -109,7 +108,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
             const SizedBox(height: 24),
             Text(
               'Fotoğraf Ekle',
-              style: GoogleFonts.poppins(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
                 color: const Color(0xFF1F2937),
@@ -170,7 +169,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
             const SizedBox(height: 12),
             Text(
               label,
-              style: GoogleFonts.poppins(
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
                 color: color,
@@ -234,7 +233,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
         SnackBar(
           content: Text(
             'En az bir malzeme seçmelisiniz',
-            style: GoogleFonts.poppins(),
+            style: const TextStyle(),
           ),
           backgroundColor: const Color(0xFFEF4444),
           behavior: SnackBarBehavior.floating,
@@ -282,7 +281,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
           SnackBar(
             content: Text(
               isEditing ? 'Merdiven güncellendi' : 'Merdiven eklendi',
-              style: GoogleFonts.poppins(),
+              style: const TextStyle(),
             ),
             backgroundColor: const Color(0xFF10B981),
             behavior: SnackBarBehavior.floating,
@@ -334,7 +333,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
         ),
         title: Text(
           isEditing ? 'Merdiven Düzenle' : 'Merdiven Ekle',
-          style: GoogleFonts.poppins(
+          style: const TextStyle(
             fontWeight: FontWeight.w600,
             color: const Color(0xFF1F2937),
           ),
@@ -411,7 +410,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
               const SizedBox(height: 32),
               Text(
                 'Merdiven Bilgileri',
-                style: GoogleFonts.poppins(
+                style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
                   color: const Color(0xFF1F2937),
@@ -436,7 +435,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
                       controller: _nameController,
                       decoration: InputDecoration(
                         labelText: 'Merdiven Adı *',
-                        labelStyle: GoogleFonts.poppins(
+                        labelStyle: const TextStyle(
                           color: const Color(0xFF6B7280),
                         ),
                         prefixIcon: const Icon(
@@ -456,7 +455,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
                       controller: _barcodeController,
                       decoration: InputDecoration(
                         labelText: 'Barkod *',
-                        labelStyle: GoogleFonts.poppins(
+                        labelStyle: const TextStyle(
                           color: const Color(0xFF6B7280),
                         ),
                         prefixIcon: const Icon(
@@ -492,7 +491,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
                       maxLines: 3,
                       decoration: InputDecoration(
                         labelText: 'Açıklama (Opsiyonel)',
-                        labelStyle: GoogleFonts.poppins(
+                        labelStyle: const TextStyle(
                           color: const Color(0xFF6B7280),
                         ),
                         alignLabelWithHint: true,
@@ -514,7 +513,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
                 children: [
                   Text(
                     'Malzemeler',
-                    style: GoogleFonts.poppins(
+                    style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                       color: const Color(0xFF1F2937),
@@ -537,7 +536,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
                           const SizedBox(width: 4),
                           Text(
                             'Malzeme Ekle',
-                            style: GoogleFonts.poppins(
+                            style: const TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w500,
                               color: Colors.white,
@@ -572,7 +571,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
                       const SizedBox(height: 12),
                       Text(
                         'Henüz malzeme eklenmedi',
-                        style: GoogleFonts.poppins(
+                        style: const TextStyle(
                           color: const Color(0xFF6B7280),
                         ),
                       ),
@@ -634,7 +633,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
                         )
                       : Text(
                           isEditing ? 'Güncelle' : 'Kaydet',
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
@@ -668,7 +667,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
         const SizedBox(height: 10),
         Text(
           'Fotoğraf Ekle',
-          style: GoogleFonts.poppins(
+          style: const TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w500,
             color: const Color(0xFF6B7280),
@@ -715,7 +714,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
           Expanded(
             child: Text(
               material.name,
-              style: GoogleFonts.poppins(
+              style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
                 color: const Color(0xFF1F2937),
@@ -745,7 +744,7 @@ class _AddStairScreenState extends State<AddStairScreen> {
                   alignment: Alignment.center,
                   child: Text(
                     '${sm.quantity}',
-                    style: GoogleFonts.poppins(
+                    style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
                       color: const Color(0xFF1F2937),
@@ -794,7 +793,7 @@ class _BarcodeScannerPageState extends State<_BarcodeScannerPage> {
       appBar: AppBar(
         title: Text(
           'Barkod Tara',
-          style: GoogleFonts.poppins(fontWeight: FontWeight.w600),
+          style: const TextStyle(fontWeight: FontWeight.w600),
         ),
         backgroundColor: const Color(0xFF6366F1),
         foregroundColor: Colors.white,
@@ -838,7 +837,7 @@ class _BarcodeScannerPageState extends State<_BarcodeScannerPage> {
                 ),
                 child: Text(
                   'Barkodu çerçeve içine hizalayın',
-                  style: GoogleFonts.poppins(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 14,
                   ),
@@ -915,7 +914,7 @@ class _MaterialSelectorSheetState extends State<_MaterialSelectorSheet> {
               children: [
                 Text(
                   'Malzeme Seç',
-                  style: GoogleFonts.poppins(
+                  style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
                     color: const Color(0xFF1F2937),
@@ -934,7 +933,7 @@ class _MaterialSelectorSheetState extends State<_MaterialSelectorSheet> {
                     ),
                     child: Text(
                       'Tamam (${_tempSelected.length})',
-                      style: GoogleFonts.poppins(
+                      style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
                         color: Colors.white,
@@ -955,7 +954,7 @@ class _MaterialSelectorSheetState extends State<_MaterialSelectorSheet> {
               },
               decoration: InputDecoration(
                 hintText: 'Malzeme ara...',
-                hintStyle: GoogleFonts.poppins(color: const Color(0xFF9CA3AF)),
+                hintStyle: const TextStyle(color: const Color(0xFF9CA3AF)),
                 prefixIcon: const Icon(Icons.search_rounded, color: Color(0xFF9CA3AF)),
                 filled: true,
                 fillColor: const Color(0xFFF3F4F6),
@@ -985,7 +984,7 @@ class _MaterialSelectorSheetState extends State<_MaterialSelectorSheet> {
                         const SizedBox(height: 16),
                         Text(
                           'Malzeme bulunamadı',
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             color: const Color(0xFF6B7280),
                           ),
                         ),
@@ -1055,7 +1054,7 @@ class _MaterialSelectorSheetState extends State<_MaterialSelectorSheet> {
                                 children: [
                                   Text(
                                     material.name,
-                                    style: GoogleFonts.poppins(
+                                    style: const TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w500,
                                       color: const Color(0xFF1F2937),
@@ -1066,7 +1065,7 @@ class _MaterialSelectorSheetState extends State<_MaterialSelectorSheet> {
                                       material.description!,
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
-                                      style: GoogleFonts.poppins(
+                                      style: const TextStyle(
                                         fontSize: 12,
                                         color: const Color(0xFF6B7280),
                                       ),

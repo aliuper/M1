@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import '../providers/stair_provider.dart';
 import '../models/stair_model.dart';
@@ -51,7 +50,7 @@ class _StairListScreenState extends State<StairListScreen> {
         ),
         title: Text(
           'Merdiven Modelleri',
-          style: GoogleFonts.poppins(
+          style: const TextStyle(
             fontWeight: FontWeight.w600,
             color: const Color(0xFF1F2937),
           ),
@@ -112,7 +111,7 @@ class _StairListScreenState extends State<StairListScreen> {
                 },
                 decoration: InputDecoration(
                   hintText: 'Merdiven ara...',
-                  hintStyle: GoogleFonts.poppins(color: const Color(0xFF9CA3AF)),
+                  hintStyle: const TextStyle(color: const Color(0xFF9CA3AF)),
                   prefixIcon: const Icon(Icons.search_rounded, color: Color(0xFF9CA3AF)),
                   suffixIcon: _searchQuery.isNotEmpty
                       ? IconButton(
@@ -166,7 +165,7 @@ class _StairListScreenState extends State<StairListScreen> {
                           _searchQuery.isEmpty
                               ? 'Henüz merdiven modeli eklenmemiş'
                               : 'Merdiven bulunamadı',
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
                             color: const Color(0xFF1F2937),
@@ -178,7 +177,7 @@ class _StairListScreenState extends State<StairListScreen> {
                               ? 'Sağ üstteki + butonuna tıklayarak\nmerdiven modeli ekleyebilirsiniz'
                               : 'Farklı arama terimleri deneyin',
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 14,
                             color: const Color(0xFF6B7280),
                           ),
@@ -303,7 +302,7 @@ class _StairListScreenState extends State<StairListScreen> {
                       children: [
                         Text(
                           stair.name,
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                             color: const Color(0xFF1F2937),
@@ -323,7 +322,7 @@ class _StairListScreenState extends State<StairListScreen> {
                               ),
                               child: Text(
                                 stair.barcode,
-                                style: GoogleFonts.poppins(
+                                style: const TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xFF6366F1),
@@ -342,7 +341,7 @@ class _StairListScreenState extends State<StairListScreen> {
                               ),
                               child: Text(
                                 '${stair.materials.length} malzeme',
-                                style: GoogleFonts.poppins(
+                                style: const TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xFFF59E0B),
@@ -380,20 +379,20 @@ class _StairListScreenState extends State<StairListScreen> {
         ),
         title: Text(
           'Merdiveni Sil',
-          style: GoogleFonts.poppins(
+          style: const TextStyle(
             fontWeight: FontWeight.w600,
           ),
         ),
         content: Text(
           '"${stair.name}" merdivenini silmek istediğinize emin misiniz?',
-          style: GoogleFonts.poppins(),
+          style: const TextStyle(),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
             child: Text(
               'İptal',
-              style: GoogleFonts.poppins(
+              style: const TextStyle(
                 color: const Color(0xFF6B7280),
               ),
             ),
@@ -406,7 +405,7 @@ class _StairListScreenState extends State<StairListScreen> {
                 SnackBar(
                   content: Text(
                     'Merdiven silindi',
-                    style: GoogleFonts.poppins(),
+                    style: const TextStyle(),
                   ),
                   backgroundColor: const Color(0xFFEF4444),
                   behavior: SnackBarBehavior.floating,
@@ -424,7 +423,7 @@ class _StairListScreenState extends State<StairListScreen> {
             ),
             child: Text(
               'Sil',
-              style: GoogleFonts.poppins(
+              style: const TextStyle(
                 color: Colors.white,
               ),
             ),

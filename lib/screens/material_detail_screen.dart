@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../models/material_item.dart';
 import 'add_material_screen.dart';
 
@@ -117,17 +116,17 @@ class MaterialDetailScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     'Malzeme Adı',
-                                    style: GoogleFonts.poppins(
+                                    style: const TextStyle(
                                       fontSize: 12,
-                                      color: const Color(0xFF6B7280),
+                                      color: Color(0xFF6B7280),
                                     ),
                                   ),
                                   Text(
                                     material.name,
-                                    style: GoogleFonts.poppins(
+                                    style: const TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.w600,
-                                      color: const Color(0xFF1F2937),
+                                      color: Color(0xFF1F2937),
                                     ),
                                   ),
                                 ],
@@ -162,7 +161,7 @@ class MaterialDetailScreen extends StatelessWidget {
                                   children: [
                                     Text(
                                       'Açıklama',
-                                      style: GoogleFonts.poppins(
+                                      style: const TextStyle(
                                         fontSize: 12,
                                         color: const Color(0xFF6B7280),
                                       ),
@@ -170,9 +169,9 @@ class MaterialDetailScreen extends StatelessWidget {
                                     const SizedBox(height: 4),
                                     Text(
                                       material.description!,
-                                      style: GoogleFonts.poppins(
+                                      style: const TextStyle(
                                         fontSize: 15,
-                                        color: const Color(0xFF1F2937),
+                                        color: Color(0xFF1F2937),
                                         height: 1.5,
                                       ),
                                     ),
@@ -206,17 +205,17 @@ class MaterialDetailScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     'Eklenme Tarihi',
-                                    style: GoogleFonts.poppins(
+                                    style: const TextStyle(
                                       fontSize: 12,
-                                      color: const Color(0xFF6B7280),
+                                      color: Color(0xFF6B7280),
                                     ),
                                   ),
                                   Text(
                                     _formatDate(material.createdAt),
-                                    style: GoogleFonts.poppins(
+                                    style: const TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w500,
-                                      color: const Color(0xFF1F2937),
+                                      color: Color(0xFF1F2937),
                                     ),
                                   ),
                                 ],

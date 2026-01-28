@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:path_provider/path_provider.dart';
 import '../providers/settings_provider.dart';
 import '../providers/material_provider.dart';
@@ -58,7 +57,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               const SizedBox(height: 24),
               Text(
                 'Veri Kayıt Yolu',
-                style: GoogleFonts.poppins(
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
                   color: const Color(0xFF1F2937),
@@ -142,7 +141,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     children: [
                       Text(
                         title,
-                        style: GoogleFonts.poppins(
+                        style: const TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w600,
                           color: const Color(0xFF1F2937),
@@ -158,7 +157,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ),
                           child: Text(
                             'Varsayılan',
-                            style: GoogleFonts.poppins(
+                            style: const TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.w500,
                               color: Colors.white,
@@ -171,7 +170,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   const SizedBox(height: 4),
                   Text(
                     subtitle,
-                    style: GoogleFonts.poppins(
+                    style: const TextStyle(
                       fontSize: 11,
                       color: const Color(0xFF6B7280),
                     ),
@@ -196,7 +195,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       SnackBar(
         content: Text(
           message,
-          style: GoogleFonts.poppins(),
+          style: const TextStyle(),
         ),
         backgroundColor: const Color(0xFF10B981),
         behavior: SnackBarBehavior.floating,
@@ -231,7 +230,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             const SizedBox(width: 12),
             Text(
               'Tüm Verileri Sil',
-              style: GoogleFonts.poppins(
+              style: const TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 18,
               ),
@@ -240,14 +239,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         content: Text(
           'Tüm malzemeler ve merdiven modelleri silinecek. Bu işlem geri alınamaz!',
-          style: GoogleFonts.poppins(),
+          style: const TextStyle(),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
             child: Text(
               'İptal',
-              style: GoogleFonts.poppins(
+              style: const TextStyle(
                 color: const Color(0xFF6B7280),
               ),
             ),
@@ -271,7 +270,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   SnackBar(
                     content: Text(
                       'Tüm veriler silindi',
-                      style: GoogleFonts.poppins(),
+                      style: const TextStyle(),
                     ),
                     backgroundColor: const Color(0xFFEF4444),
                     behavior: SnackBarBehavior.floating,
@@ -290,7 +289,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
             child: Text(
               'Sil',
-              style: GoogleFonts.poppins(
+              style: const TextStyle(
                 color: Colors.white,
               ),
             ),
@@ -326,7 +325,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         title: Text(
           'Ayarlar',
-          style: GoogleFonts.poppins(
+          style: const TextStyle(
             fontWeight: FontWeight.w600,
             color: const Color(0xFF1F2937),
           ),
@@ -349,7 +348,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               children: [
                 Text(
                   'Depolama',
-                  style: GoogleFonts.poppins(
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                     color: const Color(0xFF6B7280),
@@ -382,7 +381,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 const SizedBox(height: 32),
                 Text(
                   'Veri Yönetimi',
-                  style: GoogleFonts.poppins(
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                     color: const Color(0xFF6B7280),
@@ -428,7 +427,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 const SizedBox(height: 32),
                 Text(
                   'Hakkında',
-                  style: GoogleFonts.poppins(
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                     color: const Color(0xFF6B7280),
@@ -510,7 +509,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 children: [
                   Text(
                     title,
-                    style: GoogleFonts.poppins(
+                    style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
                       color: isDestructive
@@ -520,7 +519,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   Text(
                     subtitle,
-                    style: GoogleFonts.poppins(
+                    style: const TextStyle(
                       fontSize: 12,
                       color: const Color(0xFF6B7280),
                     ),

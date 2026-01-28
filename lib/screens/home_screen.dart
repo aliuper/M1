@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'barcode_scanner_screen.dart';
 import 'stair_list_screen.dart';
 import 'material_list_screen.dart';
@@ -37,18 +36,18 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Merdiven',
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 32,
                             fontWeight: FontWeight.bold,
-                            color: const Color(0xFF1F2937),
+                            color: Color(0xFF1F2937),
                           ),
                         ),
                         Text(
                           'Takip Sistemi',
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
-                            color: const Color(0xFF6366F1),
+                            color: Color(0xFF6366F1),
                           ),
                         ),
                       ],
@@ -85,10 +84,10 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 40),
                 Text(
                   'Hızlı İşlemler',
-                  style: GoogleFonts.poppins(
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
-                    color: const Color(0xFF6B7280),
+                    color: Color(0xFF6B7280),
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -148,9 +147,9 @@ class HomeScreen extends StatelessWidget {
                 Center(
                   child: Text(
                     'v1.0.0',
-                    style: GoogleFonts.poppins(
+                    style: const TextStyle(
                       fontSize: 12,
-                      color: const Color(0xFF9CA3AF),
+                      color: Color(0xFF9CA3AF),
                     ),
                   ),
                 ),
@@ -222,7 +221,7 @@ class HomeScreen extends StatelessWidget {
                     const SizedBox(height: 16),
                     Text(
                       title,
-                      style: GoogleFonts.poppins(
+                      style: const TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -231,7 +230,7 @@ class HomeScreen extends StatelessWidget {
                     const SizedBox(height: 4),
                     Text(
                       subtitle,
-                      style: GoogleFonts.poppins(
+                      style: TextStyle(
                         fontSize: 13,
                         color: Colors.white.withOpacity(0.9),
                       ),

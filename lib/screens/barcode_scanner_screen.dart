@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import '../providers/stair_provider.dart';
 import '../providers/material_provider.dart';
@@ -131,7 +130,7 @@ class _BarcodeScannerScreenState extends State<BarcodeScannerScreen> {
                       ),
                       Text(
                         'Barkod Tara',
-                        style: GoogleFonts.poppins(
+                        style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: Colors.white,
@@ -220,7 +219,7 @@ class _BarcodeScannerScreenState extends State<BarcodeScannerScreen> {
                       Flexible(
                         child: Text(
                           'Merdiven barkodunu çerçeveye hizalayın',
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 14,
                             color: Colors.white,
                           ),
@@ -333,7 +332,7 @@ class _ResultSheet extends StatelessWidget {
                       children: [
                         Text(
                           'Merdiven Bulundu!',
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
                             color: const Color(0xFF10B981),
@@ -341,7 +340,7 @@ class _ResultSheet extends StatelessWidget {
                         ),
                         Text(
                           stair!.name,
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 14,
                             color: const Color(0xFF1F2937),
                           ),
@@ -359,7 +358,7 @@ class _ResultSheet extends StatelessWidget {
                 children: [
                   Text(
                     'Gerekli Malzemeler',
-                    style: GoogleFonts.poppins(
+                    style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                       color: const Color(0xFF1F2937),
@@ -374,7 +373,7 @@ class _ResultSheet extends StatelessWidget {
                     ),
                     child: Text(
                       '${stair!.materials.length}',
-                      style: GoogleFonts.poppins(
+                      style: const TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
                         color: Colors.white,
@@ -444,7 +443,7 @@ class _ResultSheet extends StatelessWidget {
                                 children: [
                                   Text(
                                     material.name,
-                                    style: GoogleFonts.poppins(
+                                    style: const TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600,
                                       color: const Color(0xFF1F2937),
@@ -455,7 +454,7 @@ class _ResultSheet extends StatelessWidget {
                                       material.description!,
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
-                                      style: GoogleFonts.poppins(
+                                      style: const TextStyle(
                                         fontSize: 12,
                                         color: const Color(0xFF6B7280),
                                       ),
@@ -476,7 +475,7 @@ class _ResultSheet extends StatelessWidget {
                               ),
                               child: Text(
                                 'x${sm.quantity}',
-                                style: GoogleFonts.poppins(
+                                style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white,
@@ -516,7 +515,7 @@ class _ResultSheet extends StatelessWidget {
                   const SizedBox(height: 24),
                   Text(
                     'Merdiven Bulunamadı',
-                    style: GoogleFonts.poppins(
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
                       color: const Color(0xFFEF4444),
@@ -526,7 +525,7 @@ class _ResultSheet extends StatelessWidget {
                   Text(
                     'Bu barkoda ait bir merdiven modeli kayıtlı değil.',
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.poppins(
+                    style: const TextStyle(
                       fontSize: 14,
                       color: const Color(0xFF6B7280),
                     ),
@@ -540,7 +539,7 @@ class _ResultSheet extends StatelessWidget {
                     ),
                     child: Text(
                       'Barkod: $barcode',
-                      style: GoogleFonts.poppins(
+                      style: const TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w500,
                         color: const Color(0xFF6366F1),
@@ -570,7 +569,7 @@ class _ResultSheet extends StatelessWidget {
                       ),
                       child: Text(
                         'Kapat',
-                        style: GoogleFonts.poppins(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
                         ),
@@ -594,7 +593,7 @@ class _ResultSheet extends StatelessWidget {
                       ),
                       child: Text(
                         'Tekrar Tara',
-                        style: GoogleFonts.poppins(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
                         ),

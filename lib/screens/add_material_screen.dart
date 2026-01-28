@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as path;
@@ -101,10 +100,10 @@ class _AddMaterialScreenState extends State<AddMaterialScreen> {
             const SizedBox(height: 24),
             Text(
               'Fotoğraf Ekle',
-              style: GoogleFonts.poppins(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
-                color: const Color(0xFF1F2937),
+                color: Color(0xFF1F2937),
               ),
             ),
             const SizedBox(height: 24),
@@ -162,7 +161,7 @@ class _AddMaterialScreenState extends State<AddMaterialScreen> {
             const SizedBox(height: 12),
             Text(
               label,
-              style: GoogleFonts.poppins(
+              style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
                 color: color,
@@ -209,7 +208,7 @@ class _AddMaterialScreenState extends State<AddMaterialScreen> {
           SnackBar(
             content: Text(
               isEditing ? 'Malzeme güncellendi' : 'Malzeme eklendi',
-              style: GoogleFonts.poppins(),
+              style: const TextStyle(),
             ),
             backgroundColor: const Color(0xFF10B981),
             behavior: SnackBarBehavior.floating,
@@ -261,9 +260,9 @@ class _AddMaterialScreenState extends State<AddMaterialScreen> {
         ),
         title: Text(
           isEditing ? 'Malzeme Düzenle' : 'Malzeme Ekle',
-          style: GoogleFonts.poppins(
+          style: const TextStyle(
             fontWeight: FontWeight.w600,
-            color: const Color(0xFF1F2937),
+            color: Color(0xFF1F2937),
           ),
         ),
       ),
@@ -338,10 +337,10 @@ class _AddMaterialScreenState extends State<AddMaterialScreen> {
               const SizedBox(height: 32),
               Text(
                 'Malzeme Bilgileri',
-                style: GoogleFonts.poppins(
+                style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
-                  color: const Color(0xFF1F2937),
+                  color: Color(0xFF1F2937),
                 ),
               ),
               const SizedBox(height: 16),
@@ -363,8 +362,8 @@ class _AddMaterialScreenState extends State<AddMaterialScreen> {
                       controller: _nameController,
                       decoration: InputDecoration(
                         labelText: 'Malzeme Adı *',
-                        labelStyle: GoogleFonts.poppins(
-                          color: const Color(0xFF6B7280),
+                        labelStyle: const TextStyle(
+                          color: Color(0xFF6B7280),
                         ),
                         prefixIcon: const Icon(
                           Icons.inventory_2_outlined,
@@ -384,8 +383,8 @@ class _AddMaterialScreenState extends State<AddMaterialScreen> {
                       maxLines: 3,
                       decoration: InputDecoration(
                         labelText: 'Açıklama (Opsiyonel)',
-                        labelStyle: GoogleFonts.poppins(
-                          color: const Color(0xFF6B7280),
+                        labelStyle: const TextStyle(
+                          color: Color(0xFF6B7280),
                         ),
                         alignLabelWithHint: true,
                         prefixIcon: const Padding(
@@ -425,7 +424,7 @@ class _AddMaterialScreenState extends State<AddMaterialScreen> {
                         )
                       : Text(
                           isEditing ? 'Güncelle' : 'Kaydet',
-                          style: GoogleFonts.poppins(
+                          style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
@@ -458,10 +457,10 @@ class _AddMaterialScreenState extends State<AddMaterialScreen> {
         const SizedBox(height: 12),
         Text(
           'Fotoğraf Ekle',
-          style: GoogleFonts.poppins(
+          style: const TextStyle(
             fontSize: 13,
             fontWeight: FontWeight.w500,
-            color: const Color(0xFF6B7280),
+            color: Color(0xFF6B7280),
           ),
         ),
       ],

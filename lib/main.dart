@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'providers/material_provider.dart';
 import 'providers/stair_provider.dart';
 import 'providers/settings_provider.dart';
@@ -31,16 +30,15 @@ class MerdivenTakipApp extends StatelessWidget {
             seedColor: const Color(0xFF6366F1),
             brightness: Brightness.light,
           ),
-          textTheme: GoogleFonts.poppinsTextTheme(),
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
             centerTitle: true,
             elevation: 0,
             backgroundColor: Colors.transparent,
-            foregroundColor: const Color(0xFF1F2937),
-            titleTextStyle: GoogleFonts.poppins(
+            foregroundColor: Color(0xFF1F2937),
+            titleTextStyle: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w600,
-              color: const Color(0xFF1F2937),
+              color: Color(0xFF1F2937),
             ),
           ),
           elevatedButtonTheme: ElevatedButtonThemeData(
@@ -82,12 +80,11 @@ class MerdivenTakipApp extends StatelessWidget {
             seedColor: const Color(0xFF6366F1),
             brightness: Brightness.dark,
           ),
-          textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme),
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
             centerTitle: true,
             elevation: 0,
             backgroundColor: Colors.transparent,
-            titleTextStyle: GoogleFonts.poppins(
+            titleTextStyle: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w600,
               color: Colors.white,
